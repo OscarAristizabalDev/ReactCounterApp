@@ -24,9 +24,10 @@ export const FirstApp = ({title, subTitle, name} : FirstAppProps) => {
 
     return (
         <>
-            <h1>{title}</h1>
+            <div data-testid='test-title'>{title}</div>
             {/* <h1>{ getResult() }</h1> */}
             {/* <h1>{ JSON.stringify(newMessage) }</h1> */}
+            <p>{subTitle}</p>
             <p>{subTitle}</p>
             <p>{name}</p>
         </>
@@ -34,7 +35,7 @@ export const FirstApp = ({title, subTitle, name} : FirstAppProps) => {
 }
 
 type FirstAppProps = {
-    name: string
-    subTitle?: number, // ? indica que no es obligatorio
-    title?: string,
+    name?: string
+    subTitle?: string, // ? indica que no es obligatorio
+    title: string,
 }
