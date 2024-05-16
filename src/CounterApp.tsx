@@ -1,3 +1,4 @@
+import React from 'react'
 import { useState } from 'react';
 
 export const CounterApp = ({value}: CounterAppProps) => {
@@ -20,10 +21,10 @@ export const CounterApp = ({value}: CounterAppProps) => {
     return (
     <>
         <h1>CounterApp</h1>
-        <p> { counter } </p>
+        <h2> { counter } </h2>
         <button onClick={ () => sumar(1) } >+1</button>
         <button onClick={ () => restar(1) } >-1</button>
-        <button onClick={ () => reset() } >Reset</button>
+        <button aria-label='btn-reset' onClick={ () => reset() } >Reset</button>
     </>
   )
 }
